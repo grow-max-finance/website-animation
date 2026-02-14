@@ -1,0 +1,65 @@
+---
+title: "Platform Architecture"
+description: "How Growmax is built and structured"
+---
+
+# Platform Architecture
+
+Growmax is built as a wallet-connected, product-driven platform operating exclusively on BNB Chain.
+
+The architecture separates user interaction, product logic, and asset handling to ensure predictable execution and risk containment.
+
+## Wallet-Connected Interaction Layer
+
+Growmax operates without traditional user accounts.
+
+- No usernames, emails, or passwords
+- No internal user wallets
+- Access is established via wallet connection only
+
+All actions — deposits, withdrawals, borrowing — require explicit wallet approval.
+
+This removes common attack vectors such as credential theft and account takeovers.
+
+## Product-Driven Logic
+
+Each Growmax product (Earn, Borrow, Referral) operates within a defined logic layer that governs:
+
+- Asset eligibility
+- Network enforcement
+- Reward calculation
+- Exit and withdrawal conditions
+- Risk thresholds
+
+Product rules are fixed at participation and enforced automatically.
+
+## Single-Chain Execution
+
+Growmax operates exclusively on BNB Chain.
+
+This design choice:
+
+- Eliminates cross-chain bridge risk
+- Ensures consistent pricing and monitoring
+- Enables faster and more reliable liquidation execution
+
+All deposits, withdrawals, and collateral interactions occur on BNB Chain only.
+
+## Asset Segregation
+
+Assets are segregated by product:
+
+- Earn assets are isolated from Borrow collateral
+- Borrow collateral is isolated by asset type
+- Referral rewards are accounted for separately
+
+There is no cross-product commingling of assets.
+
+## On-Chain & Off-Chain Coordination
+
+Growmax uses a hybrid approach:
+
+- **On-chain:** asset transfers, confirmations, settlement
+- **Off-chain:** product accounting, reward calculation, monitoring
+
+This allows scalable operations while maintaining transparent execution.

@@ -1,0 +1,155 @@
+---
+title: "Collateral, LTV & Liquidation"
+description: "Understanding collateral, loan-to-value ratios, and liquidation"
+---
+
+# Collateral, LTV & Liquidation
+
+This section explains the core risk concepts that govern how borrowing works on Growmax: Collateral, Loan-to-Value (LTV), and Liquidation.
+
+Understanding these concepts is essential before using any borrowing product. Borrowing on Growmax is rule-based, automated, and non-discretionary, meaning outcomes are determined strictly by these parameters.
+
+## Collateral
+
+Collateral is a digital asset that a user deposits to secure a loan.
+
+On Growmax, collateral serves one purpose only: **To protect the borrowed amount against market volatility.**
+
+When a user deposits collateral:
+
+- The asset is locked under controlled custody
+- It cannot be used, transferred, or withdrawn while the loan is active
+- Legal ownership remains with the user
+
+Collateral is not a fee and not spent. It is held as security and released when the loan is repaid according to product terms.
+
+### Why Collateral is Required
+
+Digital asset prices can change rapidly. Collateral ensures that:
+
+- Loans remain covered even if asset prices fall
+- The platform does not rely on creditworthiness or discretion
+- Borrowing risk is managed transparently and automatically
+
+Growmax requires over-collateralisation, meaning users must deposit collateral worth more than the borrowed amount.
+
+This is a deliberate design choice to reduce systemic risk.
+
+## Loan-to-Value (LTV)
+
+Loan-to-Value (LTV) is a ratio that measures loan risk.
+
+It represents how much has been borrowed relative to the value of the collateral.
+
+### LTV Formula
+
+```
+LTV = Borrowed Amount ÷ Current Collateral Value
+```
+
+**Example:**
+- Collateral value: $10,000
+- Borrowed amount: $5,000
+- LTV = 50%
+
+As collateral prices change, the LTV changes automatically.
+
+### Why LTV Matters
+
+LTV is the primary risk indicator for borrow positions.
+
+- Lower LTV = safer position
+- Higher LTV = higher risk of liquidation
+
+Growmax continuously monitors LTV to ensure loans remain adequately secured.
+
+Borrowing capacity, margin calls, and liquidation events are all determined by LTV thresholds.
+
+## Margin Calls (Risk Warning Stage)
+
+A margin call occurs when LTV reaches a predefined risk warning level.
+
+At this stage:
+
+- The loan is still active
+- Collateral has declined relative to the loan
+- The user is expected to act
+
+Typical actions include:
+
+- Adding more collateral
+- Repaying part of the loan
+
+Margin calls are alerts, not enforcement actions.
+
+Market movement continues regardless of notifications.
+
+## Liquidation
+
+Liquidation is the automatic enforcement mechanism that protects the platform and users from under-collateralised loans.
+
+If LTV reaches the liquidation threshold:
+
+- The system automatically liquidates collateral
+- Collateral is sold to settle the outstanding loan
+- Execution follows predefined rules
+
+Liquidation is not discretionary and cannot be manually delayed or overridden.
+
+### Why Liquidation Exists
+
+Liquidation ensures that:
+
+- Borrowed funds remain protected
+- Losses do not exceed collateral value
+- Risk is managed consistently across all users
+
+Without liquidation, borrowing platforms become vulnerable to insolvency during sharp market movements.
+
+Growmax enforces liquidation early and conservatively to avoid cascading risk.
+
+### Post-Liquidation Outcomes
+
+After liquidation:
+
+- The borrowed amount is settled
+- Execution costs and market slippage may apply
+- Any remaining collateral (if available) is returned
+
+Liquidation outcomes depend on market conditions at the time of execution.
+
+Users may experience partial or total collateral loss.
+
+## No Discretion or Exceptions
+
+Growmax does not:
+
+- Pause liquidation due to market sentiment
+- Make exceptions for individual users
+- Manually intervene in borrow positions
+
+All outcomes are determined strictly by rules defined in advance.
+
+This removes uncertainty and ensures equal treatment.
+
+## User Responsibility
+
+Borrowing on Growmax requires active monitoring.
+
+Users are responsible for:
+
+- Understanding LTV mechanics
+- Monitoring collateral health
+- Managing exposure during volatile markets
+
+Growmax provides structure and enforcement, not judgment.
+
+## Summary
+
+Collateral, LTV, and liquidation form the core safety framework of Growmax Borrow.
+
+- **Collateral** secures the loan
+- **LTV** measures risk in real time
+- **Liquidation** enforces protection automatically
+
+This framework ensures that borrowing remains transparent, predictable, and disciplined, even during extreme market conditions.

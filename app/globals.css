@@ -1,0 +1,412 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-primary: #0069D0;
+  --font-family-sans: var(--font-inter), system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+body {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+  max-width: 100vw;
+  position: relative;
+}
+
+/* Custom select dropdown styling */
+select option {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 8px;
+}
+
+select option:checked,
+select option:hover {
+  background-color: #0069D0;
+  color: white;
+}
+
+/* Floating animations for hero dashboard */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes float-delayed {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-delayed 8s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+/* 3D Perspective and Transform Utilities */
+.perspective-container {
+  perspective: 1200px;
+  perspective-origin: center center;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.preserve-3d > * {
+  transform-style: preserve-3d;
+}
+
+/* TranslateZ utilities for 3D depth - using !important to override Tailwind's transform */
+.translate-z-\[-50px\] {
+  --tw-translate-z: -50px;
+  transform: translate3d(var(--tw-translate-x, 0), var(--tw-translate-y, 0), -50px);
+}
+
+.translate-z-\[0px\] {
+  --tw-translate-z: 0px;
+}
+
+.translate-z-\[40px\] {
+  --tw-translate-z: 40px;
+  transform: translateZ(40px);
+}
+
+.translate-z-\[60px\] {
+  --tw-translate-z: 60px;
+  transform: translateZ(60px);
+}
+
+.translate-z-\[80px\] {
+  --tw-translate-z: 80px;
+  transform: translateZ(80px);
+}
+
+/* Glass card effect for 3D floating cards - Web3 theme */
+.glass-card {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transform-style: preserve-3d;
+}
+
+/* Grid pattern background */
+.bg-grid-pattern {
+  background-image: linear-gradient(to right, #1f1f22 1px, transparent 1px), 
+                    linear-gradient(to bottom, #1f1f22 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Hero glow effect */
+.hero-glow {
+  background: radial-gradient(circle at center, rgba(0, 105, 208, 0.25) 0%, transparent 70%);
+}
+
+/* Blob animation for glow orbs */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 10s infinite;
+}
+
+/* Slow spin animation */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
+
+/* Slow pulse animation */
+.animate-pulse-slow {
+  animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* 3D floating animations that work with translateZ */
+@keyframes float-3d {
+  0%, 100% {
+    transform: translateZ(40px) translateY(0px);
+  }
+  50% {
+    transform: translateZ(40px) translateY(-20px);
+  }
+}
+
+@keyframes float-3d-delayed {
+  0%, 100% {
+    transform: translateZ(60px) translateY(0px);
+  }
+  50% {
+    transform: translateZ(60px) translateY(-15px);
+  }
+}
+
+@keyframes float-3d-far {
+  0%, 100% {
+    transform: translateZ(80px) translateY(0px);
+  }
+  50% {
+    transform: translateZ(80px) translateY(-12px);
+  }
+}
+
+.animate-float-3d {
+  animation: float-3d 6s ease-in-out infinite;
+}
+
+.animate-float-3d-delayed {
+  animation: float-3d-delayed 8s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.animate-float-3d-far {
+  animation: float-3d-far 7s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+/* Cursor light effect */
+.cursor-light,
+.cursor-light-glow,
+.cursor-trail {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+}
+
+.cursor-light {
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, rgba(0, 105, 208, 1) 0%, rgba(0, 105, 208, 0.6) 50%, transparent 100%);
+  filter: blur(5px);
+  box-shadow: 0 0 20px rgba(0, 105, 208, 0.8);
+}
+
+.cursor-light-glow {
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle, rgba(0, 105, 208, 0.15) 0%, rgba(0, 105, 208, 0.05) 40%, transparent 70%);
+  filter: blur(20px);
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.cursor-trail {
+  width: 30px;
+  height: 30px;
+  background: radial-gradient(circle, rgba(0, 105, 208, 0.6) 0%, rgba(0, 150, 255, 0.3) 40%, transparent 70%);
+  filter: blur(8px);
+  animation: fade-out 0.6s ease-out forwards;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Shimmer animation for ecosystem flow lines */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}
+
+/* Animations */
+@keyframes slideDownLeft {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDownRight {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes flowDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(34, 197, 94, 0.6);
+  }
+}
+
+@keyframes slideInConnector {
+  from {
+    opacity: 0;
+    stroke-dashoffset: 100;
+  }
+  to {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes movingDashBorder {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 20px 0;
+  }
+}
+
+/* Animation Classes */
+.animate-slide-down-left {
+  animation: slideDownLeft 0.6s ease-out forwards;
+}
+
+.animate-slide-down-right {
+  animation: slideDownRight 0.6s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.animate-flow-down {
+  animation: flowDown 0.5s ease-out forwards;
+}
+
+.animate-glow-pulse {
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+.animate-connector-flow {
+  animation: flowDown 0.8s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+.animate-bottom-result {
+  animation: flowDown 0.6s ease-out forwards;
+}
+
+.connector-line {
+  background-image: repeating-linear-gradient(
+    to right,
+    rgb(34, 197, 94) 0px,
+    rgb(34, 197, 94) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  background-size: 20px 2px;
+  background-repeat: repeat-x;
+  background-position: 0 center;
+  height: 2px;
+  animation: movingDashBorder 1s linear infinite;
+}
+/* Dark background */
+.bg-protocol {
+  background-color: #080808;
+}
+.bg-protocol::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 50% 20%,
+    rgba(0, 150, 255, 0.05),
+    transparent 60%
+  );
+  pointer-events: none;
+}
+.bg-protocol {
+  background-color: zinc-900/90;
+}
