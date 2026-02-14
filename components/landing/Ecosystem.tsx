@@ -20,7 +20,7 @@ export default function Ecosystemarchitecture() {
   <div className="flex flex-col items-center relative">
 
     {/* Card */}
-    <div className="eco-glass-card bg-zinc-900 border-zinc-500 border border-soft rounded-xl p-6 shadow-glow hover:shadow-xl transition animate-slide-down-left w-full">
+    <div className="eco-glass-card bg-zinc-800 border-zinc-500 border border-soft rounded-xl p-6 shadow-glow hover:shadow-xl transition animate-slide-down-left w-full">
       <div className="flex flex-col items-center gap-3">
         <div className="w-10 h-10 rounded-full bg-soft flex items-center justify-center">
           👤
@@ -36,7 +36,7 @@ export default function Ecosystemarchitecture() {
     <div className="h-8 w-[1px] bg-gradient-to-b from-zinc-800 to-blue-900/50 mt-2"></div>
 
     {/* Button */}
-    <div className="bg-zinc-900/80 border border-zinc-800 px-4 py-1.5 rounded-full text-xs font-mono text-zinc-300 shadow-sm flex items-center gap-2 mt-2">
+    <div className="bg-zinc-800/80 border border-zinc-800 px-4 py-1.5 rounded-full text-xs font-mono text-zinc-300 shadow-sm flex items-center gap-2 mt-2">
       ↓ Deposits USDT
     </div>
     <div className="h-8 w-[1px] bg-gradient-to-b from-zinc-800 to-blue-900/50  mt-2"></div>
@@ -47,7 +47,7 @@ export default function Ecosystemarchitecture() {
   <div className="flex flex-col items-center relative">
 
     {/* Card */}
-    <div className="eco-glass-card bg-zinc-900 border border-zinc-500 rounded-xl p-6 shadow-glow hover:shadow-xl transition animate-slide-down-right w-full">
+    <div className="eco-glass-card bg-zinc-800 border border-zinc-500 rounded-xl p-6 shadow-glow hover:shadow-xl transition animate-slide-down-right w-full">
       <div className="flex flex-col items-center gap-3">
         <div className="w-10 h-10 rounded-full bg-soft flex items-center justify-center">
           👥
@@ -60,10 +60,10 @@ export default function Ecosystemarchitecture() {
     </div>
 
     {/* Connector Line */}
-    <div className="h-8 w-[1px] bg-gradient-to-b from-zinc-800 to-blue-900/50mt-2"></div>
+    <div className="h-8 w-[1px] bg-gradient-to-b from-zinc-800 to-blue-900/50 mt-2"></div>
 
     {/* Button */}
-    <div className="eco-glass-card bg-zinc-900/80 border border-zinc-800 px-4 py-1.5 rounded-full text-xs font-mono text-zinc-300 shadow-sm flex items-center gap-2 mt-2">
+    <div className="eco-glass-card bg-zinc-800/80 border border-zinc-800 px-4 py-1.5 rounded-full text-xs font-mono text-zinc-300 shadow-sm flex items-center gap-2 mt-2">
       ↓ Deposits Collateral
     </div>
 <div className="h-8 w-[1px] bg-gradient-to-b from-zinc-800 to-blue-900/50 mt-2"></div>
@@ -91,7 +91,7 @@ export default function Ecosystemarchitecture() {
 
     <div className="grid md:grid-cols-2 gap-8">
       {/* Earn Pool */}
-      <div className="eco-glass-card bg-zinc-900/50 p-6 rounded-xl border border-white/10">
+      <div className="eco-glass-card bg-zinc-800/50 p-6 rounded-xl border border-white/10">
         <h4 className="text-xs font-bold mb-6 tracking-widest text-gray-400 font-mono uppercase">
           Earn Pool
         </h4>
@@ -115,7 +115,7 @@ export default function Ecosystemarchitecture() {
       </div>
 
       {/* Lending Engine */}
-      <div className="eco-glass-cardbg-zinc-900/50 p-6 rounded-xl border border-white/10">
+      <div className="eco-glass-cardbg-zinc-800/50 p-6 rounded-xl border border-white/10">
         <h4 className="text-xs font-bold mb-6 tracking-widest text-gray-400 font-mono uppercase">
           Lending Engine
         </h4>
@@ -186,7 +186,7 @@ export default function Ecosystemarchitecture() {
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-3xl mx-auto relative z-10">
 
   {/* Earns Yield Card */}
-  <div className="group relative eco-glass-card bg-zinc-900 border border-white/10 rounded-xl p-5 flex items-center justify-between overflow-hidden transition hover:border-blue-500/40">
+  <div className="group relative eco-glass-card bg-zinc-800 border border-white/10 rounded-xl p-5 flex items-center justify-between overflow-hidden transition hover:border-blue-500/40">
 
     {/* Left Accent */}
     <div className="absolute left-0 top-0 bottom-0 w-1 bg-blue-600 rounded-l-md"></div>
@@ -209,7 +209,7 @@ export default function Ecosystemarchitecture() {
   </div>
 
   {/* Repay Card */}
-  <div className="group relative eco-glass-card bg-zinc-900 border border-white/10 rounded-xl p-5 flex items-center justify-between overflow-hidden transition hover:border-indigo-500/40">
+  <div className="group relative eco-glass-card bg-zinc-800 border border-white/10 rounded-xl p-5 flex items-center justify-between overflow-hidden transition hover:border-indigo-500/40">
 
     {/* Right Accent */}
     <div className="absolute right-0 top-0 bottom-0 w-1 bg-indigo-500 rounded-r-md"></div>
