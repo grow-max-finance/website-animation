@@ -114,12 +114,17 @@ select option:hover {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   transform-style: preserve-3d;
 }
+.eco-glass-card {
+    background: rgba(20, 20, 23, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
 
 /* Grid pattern background */
 .bg-grid-pattern {
-  background-image: linear-gradient(to right, #1f1f22 1px, transparent 1px), 
-                    linear-gradient(to bottom, #1f1f22 1px, transparent 1px);
-  background-size: 40px 40px;
+  background-image:linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 
 /* Hero glow effect */
